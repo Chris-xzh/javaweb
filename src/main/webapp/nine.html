@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        table {
+            margin: auto;
+            border-collapse: collapse;   /* 去掉单元格的间隔 */
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        td {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<script type="text/javascript">
+    // 1)   由用户输入乘法表的行数
+    var num = prompt("请输入乘法表的行数：", "9");
+    num = parseInt(num);
+    document.write("<h2>" + num + "x" + num + "乘法表</h2>");
+    document.write("<table border='1'>");
+    // 2)   使用循环嵌套的方式，每个外循环是一行tr，每个内循环是一个td
+    for (var i = 1; i <= num; i++) {
+        document.write("<tr>");
+        for (var j = 1; j <= i; j++) {
+            document.write("<td>");
+            // 3) 输出每个单元格中的计算公式
+            document.write(j + "x" + i + "=" + (i * j) );
+            document.write("</td>")
+        }
+        document.write("</tr>");
+    }
+    document.write("</table>");
+</script>
+</body>
+</html>

@@ -3,17 +3,26 @@
 <html>
 <head>
     <title>Title</title>
+    <script type="text/javascript">
+        //定义变量
+        {
+            var i = 5;   //整数
+            var f = 3.14;  //浮点
+            var b = true;  //布尔
+            var c = 'a';  //字符串
+            var str = "abc";   //字符串
+            m = 100;
+        }
+        document.write(b + "<br/>");
+        var b = "Hello";  //字符串
+        document.write(b + "<br/>");
+        document.write(i + "<br/>");
+        document.write(f + "<br/>");
+        document.write(c+ "<br/>");
+        document.write(str + "<br/>");
+        document.write(m + "<br/>");
+    </script>
 </head>
 <body>
-<%
-    request.setAttribute("NAME","北京");
-    session.setAttribute("NAME","上海");
-    application.setAttribute("NAME","广州");
-%>
-城市为：${NAME}
-<hr/>
-堵城：${requestScope.NAME}<br/>
-海城：${sessionScope.NAME}<br/>
-羊城：${applicationScope.NAME}<br/>
 </body>
 </html>
