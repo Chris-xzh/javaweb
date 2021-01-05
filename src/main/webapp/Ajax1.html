@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>原生ajax</title>
+    <script type="text/javascript">
+        function sendRequest() {
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function () {
+                if(xmlHttp.readyState==4 && xmlHttp.status==200){
+                    var result = xmlHttp.responseText;
+                    alert(result);
+                }
+            };
+            xmlHttp.open("get","ajaxServlet1")
+            xmlHttp.send();
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="发送异步请求" onclick="sendRequest()">
+</body>
+</html>
